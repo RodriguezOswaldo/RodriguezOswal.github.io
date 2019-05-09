@@ -3,10 +3,27 @@ $body-background-color: darkred;
 $form-background-color: white;
 $input-color: white;
 $headlines-color: white;
+$break-small: 500px;
 
 body {
     background-color: $body-background-color; 
 }
-body{
-     background: gray;
-}
+
+
+#contactform {
+    background-color: $form-background-color;
+    input, textarea {
+        background-color: $input-color;
+        flex: 2;
+    }
+    @media (min-width: $break-small) {
+        & {
+           width: 90%;
+           max-width: 700px;
+           margin-left: auto;
+           margin-right: auto; 
+         } 
+     }
+    
+ }
+
