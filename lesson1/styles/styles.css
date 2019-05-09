@@ -1,0 +1,120 @@
+@import url("/kids/styles/main.css");
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+
+:root{
+    --primary: #6495ed;
+    --secondary: #faebd7;
+    --third: #deb887;
+}
+html{
+    margin: 0 40px;
+    background: black;
+}
+body{
+    margin: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lora', serif;
+    font-size: 45px;
+}
+h2{
+    font-size: 35px;
+    margin: auto 30px;
+    color: black;
+}
+header{
+    grid-area: head;
+    text-align: right;
+    padding:5px 40px;
+    background: var(--primary);
+}
+a:hover{
+        text-decoration: underline;
+    }
+a:active{
+        color: var(--third);
+    }
+header h1 a {
+    color: var(--secondary);
+}
+header ul li {
+    list-style-type: none;
+    padding: 8px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: var(--secondary);
+}
+header a:link{
+    color: var(--secondary);
+}
+header a:active{
+    color: var(--third);
+}
+header a:hover{
+    color:white;
+    text-decoration: underline;
+}
+main{
+    grid-area: main;
+    background: var(--secondary);
+    margin: auto;
+    padding: 40px 40px 60px 40px;;
+}
+ article{
+    grid-area: article;
+    background: var(--third);
+    box-shadow: gray 5px 5px 5px;
+}
+article a:visited {
+    color: var(--primary);
+}
+img{
+    width: 20em;
+}
+figure {
+    text-align: center;
+}
+.post-date{
+    padding:30px 0px 0px 20px;;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 15px 10px;
+}
+.post-content h2{
+    padding: 0px 0px 40px 0px;
+}
+.post-content p{
+    padding: 10px;
+    margin: auto;
+}
+h2 a:visited {
+    color:black;
+}
+
+@media screen and (min-width: 700px){
+body div{
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    margin: 0 20px;
+    grid-template-areas:
+                "head main main main"
+                'head main main main'
+                'head main main main'
+                'head main main main'; ;
+
+}
+h1{
+    font-size: 35px;
+}
+header ul li {
+    font-size: 15px;
+}
+
+}
